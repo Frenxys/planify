@@ -31,7 +31,7 @@
   
   <style scoped>
   h1 {
-      text-align: center;
+      text-align: left;
       margin-bottom: 20px;
       color: #ffcc00;
   }

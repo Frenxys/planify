@@ -2,15 +2,20 @@
 <template>
     <div>
       <h1>Benvenuto su Planify</h1>
-      <p>Il tuo pianificatore di viaggi preferito!</p>
       <ItineraryCard
-        title="Viaggio a Roma"
-        description="Un tour di 3 giorni nella città eterna"
+        v-for="itinerary in itineraries"
+        :key="itinerary.id"
+        :id="itinerary.id"
+        :title="itinerary.title"
+        :description="itinerary.description"
       />
     </div>
   </template>
   
   <script setup>
-  import ItineraryCard from '@/components/ItineraryCard.vue';
+  const itineraries = [
+    { id: 1, title: 'Viaggio a Roma', description: 'Un tour di 3 giorni nella città eterna' },
+    { id: 2, title: 'Weekend a Parigi', description: 'Scopri la città dell\'amore in 2 giorni' }
+  ];
   </script>
   
